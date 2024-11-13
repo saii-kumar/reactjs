@@ -1,0 +1,18 @@
+sudo apt update
+    2  sudo apt install nodejs npm -y
+    3  sudo nodejs -v
+    4  sudo npm -v
+    5  git clone https://github.com/africacloudpapa/new-react-app.git
+    6  ls
+    7  cd new-react-app
+    8  ls
+    9  npm install
+   10  npm run build
+   11  ls
+   12  sudo apt install nginx -y
+   13  sudo nginx -v
+ sudo chown -R www-data:www-data /home/ubuntu/new-react-app/build
+   62  sudo chmod -R 755 /home/ubuntu/new-react-app/build
+rm -rf /var/www/html/*
+sudo cp -r ~/new-react-app/build/* /var/www/html
+sudo systemctl restart nginx
